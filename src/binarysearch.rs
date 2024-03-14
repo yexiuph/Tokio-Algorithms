@@ -31,7 +31,7 @@ pub fn parallel_binary_search(
     None
 }
 
-pub fn binary_search(arr: &[i32], desired: i32, start: usize, end: usize) -> Option<usize> {
+fn binary_search(arr: &[i32], desired: i32, start: usize, end: usize) -> Option<usize> {
     let mut low = start;
     let mut high = end;
 
