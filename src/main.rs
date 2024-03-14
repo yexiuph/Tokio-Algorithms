@@ -1,12 +1,12 @@
 use std::error::Error;
 
-mod csvparser;
+mod parsers;
 mod binarysearch;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     let filename = "numbers.csv";
-    let numbers = csvparser::read_numbers_from_csv(filename).await;
+    let numbers = parsers::csvparser::read_numbers_from_csv(filename).await;
 
     // Perform binary search
     let look_for = 10_000_000;
